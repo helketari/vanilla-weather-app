@@ -46,6 +46,10 @@ li {
   font-size: 36px;
 }
 
+#current-description {
+  margin-left: 50px;
+}
+
 .search {
   text-align: center;
   padding-top: 20px;
