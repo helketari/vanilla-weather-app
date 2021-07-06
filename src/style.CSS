@@ -53,8 +53,19 @@ li {
 
 .current-temp .units {
   font-size: 16px;
+  font-weight: bold;
   position: relative;
   top: -13px;
+}
+
+.current-temp .active {
+  color: #9e3668;
+  cursor: default;
+  text-decoration: none;
+}
+
+.current-temp .active:hover {
+  text-decoration: none;
 }
 
 .search {
@@ -77,11 +88,11 @@ button {
 }
 
 a {
-  color: #9e3668;
+  color: #f6a9ce;
 }
 
 .GitHub-link {
-  color: #9e3668;
+  color: #f6a9ce;
   margin-top: 20px;
   text-align: center;
 }
