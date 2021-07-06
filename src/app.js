@@ -44,7 +44,6 @@ function formatDate() {
 formatDate();
 
 function showTemperature(response) {
-  console.log(response.data);
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   let iconElement = document.querySelector("#icon");
@@ -69,7 +68,7 @@ function showTemperature(response) {
 
 function showCity(event) {
   event.preventDefault();
-  let input = document.querySelector("#city-search");
+  let input = document.querySelector("#city-input");
   let city = input.value;
   let apiKey = "14b04c33525e63089effa5297a33ce92";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;

@@ -48,6 +48,7 @@ li {
 
 #current-description {
   margin-left: 50px;
+  text-transform: capitalize;
 }
 
 .current-temp .units {
