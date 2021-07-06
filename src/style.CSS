@@ -1,0 +1,55 @@
+h1 {
+  font-family: "Srisakdi", cursive;
+  font-weight: 700;
+  font-size: 48px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+h2 {
+  font-family: "Srisakdi", cursive;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+li {
+  list-style: none;
+  text-align: left;
+}
+
+.container {
+  font-family: "Srisakdi", cursive;
+  color: #9e3668;
+}
+
+.weather-wrapper {
+  background: #fde3f0;
+  border: #9e3668;
+  border-radius: 10px;
+}
+
+.search {
+  text-align: center;
+}
+
+input[type="submit"] {
+  background: #f6a9ce;
+  border: 1 px;
+  border-radius: 4px;
+  margin: 5px;
+}
+
+button {
+  background: #f6a9ce;
+  border: 1 px;
+  border-radius: 4px;
+  margin: 5px;
+}
+
+.GitHub-link {
+  color: #9e3668;
+  margin-top: 20px;
+  text-align: center;
+}
