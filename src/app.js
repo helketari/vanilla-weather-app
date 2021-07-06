@@ -44,9 +44,19 @@ function formatDate() {
 formatDate();
 
 function showTemperature(response) {
-  let temperature = Math.round(response.data.main.temp);
-  let currentTemperature = document.querySelector(".currentTemp");
-  currentTemperature.innerHTML = temperature;
+  console.log(response.data);
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  let descriptionElement = document.querySelector("#current-description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  let highElement = document.querySelector(".current-high");
+  highElement.innerHTML = Math.round(response.data.main.temp_max);
+  let lowElement = document.querySelector(".current-low");
+  lowElement.innerHTML = Math.round(response.data.main.temp_min);
+  let humidityElement = document.querySelector(".current-humidity");
+  humidityElement.innerHTML = response.data.main.humidity;
+  let windElement = document.querySelector(".current-wind");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
   let h1 = document.querySelector("h1");
   h1.innerHTML = response.data.name;
 }
