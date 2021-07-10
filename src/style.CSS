@@ -87,12 +87,27 @@ button {
   margin: 5px;
 }
 
+.forecast {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.forecast .day {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.forcast .high {
+  font-weight: bold;
+}
+
 a {
   color: #f6a9ce;
+  text-align: center;
 }
 
 .GitHub-link {
   color: #f6a9ce;
-  margin-top: 20px;
+  margin-top: 20px 0;
   text-align: center;
 }
