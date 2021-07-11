@@ -43,38 +43,47 @@ function formatDate() {
 
 formatDate();
 
+function showForecast(response) {
+  console.log(response.data.daily);
+  let forecastElement = document.querySelector(".forecast");
+}
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "14b04c33525e63089effa5297a33ce92";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(showForecast);
+}
+
 function showTemperature(response) {
   celsiusTemperature = response.data.main.temp;
   celsiusHigh = response.data.main.temp_max;
   celsiusLow = response.data.main.temp_min;
 
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-
   let iconElement = document.querySelector("#icon");
+  let descriptionElement = document.querySelector("#current-description");
+  let highElement = document.querySelector(".current-high");
+  let lowElement = document.querySelector(".current-low");
+  let humidityElement = document.querySelector(".current-humidity");
+  let windElement = document.querySelector(".current-wind");
+  let h1 = document.querySelector("h1");
+
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
-
-  let descriptionElement = document.querySelector("#current-description");
   descriptionElement.innerHTML = response.data.weather[0].description;
-
-  let highElement = document.querySelector(".current-high");
   highElement.innerHTML = Math.round(celsiusHigh);
-
-  let lowElement = document.querySelector(".current-low");
   lowElement.innerHTML = Math.round(celsiusLow);
-
-  let humidityElement = document.querySelector(".current-humidity");
   humidityElement.innerHTML = response.data.main.humidity;
-
-  let windElement = document.querySelector(".current-wind");
   windElement.innerHTML = Math.round(response.data.wind.speed);
-
-  let h1 = document.querySelector("h1");
   h1.innerHTML = response.data.name;
+
+  getForecast(response.data.coord);
 }
 
 function search(city) {
