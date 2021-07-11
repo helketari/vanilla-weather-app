@@ -43,17 +43,30 @@ function formatDate() {
 
 formatDate();
 
-function showForecast(response) {
-  console.log(response.data.daily);
-  let forecastElement = document.querySelector(".forecast");
-}
+function showForecast() {
+  let forecastElement = document.querySelector("#forecast");
 
-function getForecast(coordinates) {
-  console.log(coordinates);
-  let apiKey = "14b04c33525e63089effa5297a33ce92";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-
-  axios.get(apiUrl).then(showForecast);
+  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+      <div class="forecast-day">${day}</div>
+      <img src="http://openweathermap.org/img/wn/50d@2x.png"
+      alt=""
+      width="42"
+      />
+      <div class="forecast-temp">
+          <span class="forecast-high"> 18˚ </span> / 
+          <span class="forecast-low"> 12˚ </span>
+      </div>
+    </div>
+  </div>
+  `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function showTemperature(response) {
@@ -164,3 +177,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 search("London");
+showForecast();

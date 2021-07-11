@@ -20,68 +20,61 @@
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-  <div class="container">
+    <div class="container">
       <div class="weather-wrapper">
-          <div class="search">
-              <form id="city-search-form">
-            <input type="text" id="city-input" placeholder="Enter location" autocomplete="off"/>
+        <div class="search">
+          <form id="city-search-form">
+            <input
+              type="text"
+              id="city-input"
+              placeholder="Enter location"
+              autocomplete="off"
+            />
             <input type="submit" value="Search" />
             <br />
             <button id="gps-search-form">Use current location</button>
-        <div class="header">
-        <h1>London</h1>
-        <h2>Saturday, 5 June at 18:52</h2>
-        </div>
-        <div class="row">
-            <div class="col" id="current-temp">
+            <div class="header">
+              <h1>London</h1>
+              <h2>Saturday, 5 June at 18:52</h2>
+            </div>
+            <div class="row">
+              <div class="col" id="current-temp">
                 <div class="clearfix current-temp">
-                <ul>
+                  <ul>
                     <li>
-                          <img src="" alt="" class="float-left" id="icon">
-                              <strong id="temperature">23</strong>
-                              <span class="units">
-                                  <a href="#" id="celsius-link" class="active">˚C</a> | 
-                                  <a href="#" id="fahrenheit-link">˚F</a>
-                            </span>
+                      <img src="" alt="" class="float-left" id="icon" />
+                      <strong id="temperature">23</strong>
+                      <span class="units">
+                        <a href="#" id="celsius-link" class="active">˚C</a> |
+                        <a href="#" id="fahrenheit-link">˚F</a>
+                      </span>
                     </li>
-                    <li id="current-description">
-                        Cloudy
-                    </li>
-                </ul>
+                    <li id="current-description">Cloudy</li>
+                  </ul>
                 </div>
-            </div>
-            <div class="col" id="current-specs">
-                <ul>
-                    <li>
-                        High: <span class="current-high">23</span>˚
-                    </li>
-                    <li>
-                        Low: <span class = "current-low">18</span>˚
-                    </li>
-                    <li>
-                        Humidity: <span class="current-humidity">80</span>%
-                    </li>
-                    <li>
-                        Wind speed: <span class="current-wind">2</span> km/h
-                    </li>
-                </ul>
-            </div>
-            <div id="forecast">
-                <div class="row">
-              <div class="col-2">
-                <span class="day">Sunday</span>
-                <br>
-                🌧
-                <br />
-                <span class="high">21˚C</span> / <span class="low">12˚C</span>
               </div>
+              <div class="col" id="current-specs">
+                <ul>
+                  <li>High: <span class="current-high">23</span>˚</li>
+                  <li>Low: <span class="current-low">18</span>˚</li>
+                  <li>Humidity: <span class="current-humidity">80</span>%</li>
+                  <li>Wind speed: <span class="current-wind">2</span> km/h</li>
+                </ul>
+              </div>
+              <div class="weather-forecast" id="forecast"></div>
             </div>
+            <span id="GitHub-link">
+              <a
+                href="https://github.com/helketari/vanilla-weather-app"
+                target="_blank"
+                >Open-source code</a
+              >
+              by Jessica Brosvic
+            </span>
+            <script src="src/app.js"></script>
+          </form>
         </div>
       </div>
-      </div>
-<span id="GitHub-link">
-    <a href="https://github.com/helketari/vanilla-weather-app" target="_blank">Open-source code</a> by Jessica Brosvic
-</span>
-  <script src="src/app.js"></script>
-</body>
+    </div>
+  </body>
 </html>
