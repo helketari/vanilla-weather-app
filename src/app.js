@@ -82,14 +82,13 @@ function showForecast(response) {
       />
       <div class="forecast-temp">
           <span class="forecast-high"> ${Math.round(
-            forecastDay.temp.max
+            forecastDay.temp.max * (9 / 5) + 32
           )}˚ </span> / 
           <span class="forecast-low"> ${Math.round(
-            forecastDay.temp.min
+            forecastDay.temp.min * (9 / 5) + 32
           )}˚ </span>
       </div>
     </div>
-  </div>
   `;
     }
   });
@@ -136,7 +135,7 @@ function showTemperature(response) {
 
 function search(city) {
   let apiKey = "14b04c33525e63089effa5297a33ce92";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
 
   axios.get(apiUrl).then(showTemperature);
 }
@@ -153,7 +152,7 @@ citySearchForm.addEventListener("submit", handleSubmit);
 function showPosition(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
-  let units = "metric";
+  let units = "imperial";
   let apiKey = "14b04c33525e63089effa5297a33ce92";
   let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
   let apiUrl = `${apiEndpoint}?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
@@ -167,49 +166,6 @@ function showCurrentPosition() {
 
 let gpsSearchButton = document.querySelector("#gps-search-form");
 gpsSearchButton.addEventListener("click", showCurrentPosition);
-
-function showFahrenheitTemperature(event) {
-  event.preventDefault();
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-
-  let fahrenheitHigh = (celsiusHigh * 9) / 5 + 32;
-  let highElement = document.querySelector(".current-high");
-  highElement.innerHTML = Math.round(fahrenheitHigh);
-
-  let fahrenheitLow = (celsiusLow * 9) / 5 + 32;
-  let lowElement = document.querySelector(".current-low");
-  lowElement.innerHTML = Math.round(fahrenheitLow);
-}
-
-function showCelsiusTemperature(event) {
-  event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-
-  let highElement = document.querySelector(".current-high");
-  highElement.innerHTML = Math.round(celsiusHigh);
-
-  let lowElement = document.querySelector(".current-low");
-  lowElement.innerHTML = Math.round(celsiusLow);
-}
-
-let celsiusTemperature = null;
-let celsiusHigh = null;
-let celsiusLow = null;
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 search("London");
 showForecast();
