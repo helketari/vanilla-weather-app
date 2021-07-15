@@ -23,10 +23,11 @@ li {
   font-family: "Srisakdi", cursive;
   color: #dc6b9c;
   max-height: 650px;
+  max-width: 950;
 }
 
 .background {
-  background-image: url("media/day5.jpg");
+  background-image: url("media/day.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -43,7 +44,22 @@ li {
 .btn-group {
   position: relative;
   margin-top: 10px;
-  margin-left: 805px;
+  margin-left: 815px;
+  border-radius: 4px;
+}
+
+#day-button {
+  padding: 1px 6px;
+  background: white;
+  color: #f6a9ce;
+  font-size: bold;
+}
+
+#night-button {
+  padding: 1px 6px;
+  background: black;
+  color: #ff487e;
+  font-size: bold;
 }
 
 #current-temp,
@@ -81,14 +97,12 @@ li {
 
 input[type="submit"] {
   background: #f6a9ce;
-  border: 1 px;
   border-radius: 4px;
   margin: 5px;
 }
 
 #gps-search-form {
   background: #f6a9ce;
-  border: 1 px;
   border-radius: 4px;
   margin: 15px;
 }
