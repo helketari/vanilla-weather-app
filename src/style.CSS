@@ -22,11 +22,13 @@ li {
 .container {
   font-family: "Srisakdi", cursive;
   color: #9e3668;
+  max-width: 1000px;
+  max-height: 1000px;
 }
 
 .weather-wrapper {
   background: #fde3f0;
-  border: #9e3668;
+  border: 2px solid #9e3668;
   border-radius: 10px;
 }
 
@@ -77,17 +79,18 @@ button {
   margin: 5px;
 }
 
-.forecast {
+.weather-forecast {
   font-size: 18px;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
-.forecast .day {
+.weather-forecast .forecast-day {
   font-size: 22px;
   font-weight: bold;
 }
 
-.forcast .high {
+.forecast-temp .forecast-high {
   font-weight: bold;
 }
 
