@@ -167,5 +167,5 @@ function showCurrentPosition() {
 let gpsSearchButton = document.querySelector("#gps-search-form");
 gpsSearchButton.addEventListener("click", showCurrentPosition);
 
-search("London");
+search("Paris");
 showForecast();

@@ -27,7 +27,7 @@ li {
 }
 
 .weather-wrapper {
-  background: #fde3f0;
+  background-image: url("media/day.jpg");
   border: 2px solid #9e3668;
   border-radius: 10px;
 }
