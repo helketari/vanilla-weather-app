@@ -125,6 +125,10 @@ a {
   color: #f6a9ce;
 }
 
+a:hover {
+  color: #7beaf3;
+}
+
 .GitHub-link {
   color: #f6a9ce;
   text-align: center;
