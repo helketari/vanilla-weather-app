@@ -26,12 +26,6 @@ li {
   max-width: 950;
 }
 
-.background {
-  background-image: url("media/day.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 .weather-wrapper {
   background-position: center;
   background-repeat: no-repeat;
@@ -44,21 +38,28 @@ li {
 .btn-group {
   position: relative;
   margin-top: 10px;
+  margin-left: 815px;
   margin-left: 805px;
   border-radius: 4px;
 }
 
 #day-button {
+  padding: 1px 6px;
   padding: 3px 8px;
   background: white;
+  border: white;
   color: #f6a9ce;
+  font-size: bold;
   font-weight: 700;
 }
 
 #night-button {
+  padding: 1px 6px;
   padding: 3px 8px;
   background: black;
+  border: black;
   color: #ff487e;
+  font-size: bold;
   font-weight: 700;
 }
 
