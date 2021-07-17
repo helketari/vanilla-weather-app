@@ -8,8 +8,8 @@ function nightMode() {
   dayButton.style.color = "#f6a9ce";
 
   var nightButton = document.querySelector("#night-button");
-  nightButton.style.background = "#ff487e";
-  nightButton.style.border = "#ff487e";
+  nightButton.style.background = "#f6a9ce";
+  nightButton.style.border = "#f6a9ce";
   nightButton.style.color = "black";
 }
 
@@ -28,7 +28,7 @@ function dayMode() {
   var nightButton = document.querySelector("#night-button");
   nightButton.style.background = "black";
   nightButton.style.border = "black";
-  nightButton.style.color = "#ff487e";
+  nightButton.style.color = "#f6a9ce";
 }
 
 let dayButton = document.querySelector("#day-button");
