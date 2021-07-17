@@ -1,3 +1,51 @@
+function nightMode() {
+  var background = document.querySelector(".bg-image");
+  background.style.backgroundImage = "url('media/night.jpg')";
+
+  var dayButton = document.querySelector("#day-button");
+  dayButton.style.background = "#7beaf3";
+  dayButton.style.border = "#7beaf3";
+  dayButton.style.color = "#f6a9ce";
+
+  var nightButton = document.querySelector("#night-button");
+  nightButton.style.background = "#ff487e";
+  nightButton.style.border = "#ff487e";
+  nightButton.style.color = "black";
+
+  var font = document.querySelector(".container");
+  font.style.color = "#ff487e";
+
+  var wrapper = document.querySelector(".weather-wrapper");
+  wrapper.style.border = "2px solid #ff487e";
+}
+
+let nightButton = document.querySelector("#night-button");
+nightButton.addEventListener("click", nightMode);
+
+function dayMode() {
+  var background = document.querySelector(".bg-image");
+  background.style.backgroundImage = "url('media/day.jpg')";
+
+  var dayButton = document.querySelector("#day-button");
+  dayButton.style.background = "#f6a9ce";
+  dayButton.style.border = "#f6a9ce";
+  dayButton.style.color = "#7beaf3";
+
+  var nightButton = document.querySelector("#night-button");
+  nightButton.style.background = "black";
+  nightButton.style.border = "black";
+  nightButton.style.color = "#ff487e";
+
+  var font = document.querySelector(".container");
+  font.style.color = "#dc6b9c";
+
+  var wrapper = document.querySelector(".weather-wrapper");
+  wrapper.style.border = "2px solid #f6a9ce";
+}
+
+let dayButton = document.querySelector("#day-button");
+dayButton.addEventListener("click", dayMode);
+
 let now = new Date();
 
 function formatDate() {

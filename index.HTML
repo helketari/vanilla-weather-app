@@ -21,10 +21,11 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-wrapper" style="background-image: url('media/day.jpg')"; id="background">  
-        <div class="btn-group" role="group">
-        <button type="button" class=" btn btn-primary" id="day-button">Day</button>
-        <button type="button" class=" btn btn-primary" id="night-button">Night</button>
+      <div class="bg-image" style="background-image: url('media/day.jpg');">
+      <div class="weather-wrapper">
+          <div class="btn-group" role="group">
+        <button type="button" class="btn" onclick="dayMode()" id="day-button">Day</button>
+        <button type="button" class="btn" onclick="nightMode()" id="night-button">Night</button>
         </div>
         <div class="search">
           <form id="city-search-form">
@@ -63,8 +64,10 @@
               </div>
             </div>
             <div class="weather-forecast" id="forecast"></div>
-      </div>
     </div>
+    </div>
+    </div>
+ 
             <span id="GitHub-link">
               <a
                 href="https://github.com/helketari/vanilla-weather-app"

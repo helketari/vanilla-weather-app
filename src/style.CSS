@@ -23,14 +23,17 @@ li {
   font-family: "Srisakdi", cursive;
   color: #dc6b9c;
   max-height: 650px;
-  max-width: 950;
+  max-width: 940px;
 }
 
-.weather-wrapper {
+.bg-image {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 650px;
+  border-radius: 10px;
+}
+
+.weather-wrapper {
   border: 2px solid #f6a9ce;
   border-radius: 10px;
 }
@@ -46,9 +49,9 @@ li {
 #day-button {
   padding: 1px 6px;
   padding: 3px 8px;
-  background: white;
-  border: white;
-  color: #f6a9ce;
+  background: #f6a9ce;
+  border: #f6a9ce;
+  color: #7beaf3;
   font-size: bold;
   font-weight: 700;
 }
@@ -132,5 +135,5 @@ a:hover {
 
 .GitHub-link {
   color: #f6a9ce;
-  text-align: center;
+  text-align: left;
 }
