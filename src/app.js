@@ -11,12 +11,6 @@ function nightMode() {
   nightButton.style.background = "#ff487e";
   nightButton.style.border = "#ff487e";
   nightButton.style.color = "black";
-
-  var font = document.querySelector(".container");
-  font.style.color = "#ff487e";
-
-  var wrapper = document.querySelector(".weather-wrapper");
-  wrapper.style.border = "2px solid #ff487e";
 }
 
 let nightButton = document.querySelector("#night-button");
@@ -35,12 +29,6 @@ function dayMode() {
   nightButton.style.background = "black";
   nightButton.style.border = "black";
   nightButton.style.color = "#ff487e";
-
-  var font = document.querySelector(".container");
-  font.style.color = "#dc6b9c";
-
-  var wrapper = document.querySelector(".weather-wrapper");
-  wrapper.style.border = "2px solid #f6a9ce";
 }
 
 let dayButton = document.querySelector("#day-button");
