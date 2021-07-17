@@ -11,7 +11,7 @@ h2 {
   font-weight: 400;
   font-size: 20px;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 55px;
 }
 
 li {
@@ -96,7 +96,6 @@ li {
 
 .search {
   text-align: center;
-  padding-top: 5px;
 }
 
 input[type="submit"] {
@@ -113,7 +112,7 @@ input[type="submit"] {
 
 .weather-forecast {
   font-size: 18px;
-  margin-top: 50px;
+  margin-top: 45px;
 }
 
 .weather-forecast .forecast-day {
